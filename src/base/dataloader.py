@@ -44,6 +44,11 @@ class BaseDataLoader(object):
             'test': 0
         }
 
+        if self.input_size[0] == 3:
+            self.data['train'] = self.data['train'].squeeze()
+            self.data['test'] = self.data['test'].squeeze()
+            
+            
         self.shuffle('train')
         # self.shuffle('test')
 
