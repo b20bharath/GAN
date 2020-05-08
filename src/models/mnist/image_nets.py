@@ -103,7 +103,7 @@ class ImgEncoder(BaseModel):
 
         conv3 = F.pad(conv3, [2, 2, 2, 2])
         out = self.conv4(conv3)
-        # print (out.shape)
+        print (out.shape)
 
         out = out.view(out.size(0), -1)
 
