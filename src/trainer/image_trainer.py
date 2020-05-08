@@ -221,6 +221,7 @@ class ImgTrainer(BaseTrainer):
         iter_time_start = time.time()
 
         x_train, _ = dl.next_batch('train')
+        #print("line 224 image_trainer",x_train)
         z_train = model.sample((H.batch_size,))
         # if self.iter_no % 3 == 0:
         self.train_step_ae(x_train, z_train)
